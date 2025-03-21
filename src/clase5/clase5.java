@@ -5,10 +5,12 @@ import java.util.Scanner;
 public class clase5 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        System.out.println("Dame un numero");
-        int numero = teclado.nextInt();
+
 
         //1.Estructura del if-else
+        //Pedir un número al usuario y determinar si es positivo, negativo o cero.
+        System.out.println("Dame un numero");
+        int numero = teclado.nextInt();
         if (numero > 0) {
             System.out.println("El numero es positivo");
         } else if (numero < 0) {
@@ -20,7 +22,7 @@ public class clase5 {
 
         //2.Creame un menu interactivo donde el usuario elija una opcion y muestra el mensaje (Switch)
         //menu
-
+        //Evaluar con switch
         System.out.println("Menu de opciones");
         System.out.println("1. Saludar");
         System.out.println("2. Mensaje motivacional");
@@ -28,7 +30,7 @@ public class clase5 {
         System.out.println("Selecciona una opcion");
         int opcion = teclado.nextInt(); //Leemos la opcion del usuario
 
-        //Evaluar con switch
+
         switch (opcion) {
             case 1:
                 System.out.println("Hola, bienvenido");
@@ -44,14 +46,14 @@ public class clase5 {
         }
 
 
-        //3. Imprimir los numeros del 1 al 10 con FOr
+        //3. Imprimir los numeros del 1 al 10 con FOR
         //Bucle para contar del 1 al 10
         for (int i = 1; i <= 10; i++) {
             System.out.println("Numero:" + i); //Mostramos cada iteracion
         }
 
 
-        //4. Usa el while para pedir numeros hasta que ponga 0
+        //4. Usa el WHILE para pedir numeros hasta que ponga 0
         System.out.println("Dame un numero y pon 0 para salir");
         int numero1 = teclado.nextInt();
         //Mientras que no sea cero, sigue pidiendo
@@ -64,7 +66,7 @@ public class clase5 {
 
 
         //5. Pide contraseña y que no pueda entrar el usuario hasta que ponga java123
-
+        //DO WHILE
 
         String password;
         do {
