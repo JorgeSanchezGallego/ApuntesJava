@@ -5,33 +5,46 @@ import java.util.Scanner;
 
 public class clase8 {
     public static void main(String[] args) {
-
-        Scanner teclado = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         int[] numeros = new int[5];
-        int indice = 1;
-        int ind = 0;
-        for (int i = 0; i < numeros.length; i++){
-            System.out.println("Introduce el numero " + (i+1) + ":");
-            numeros[i] = teclado.nextInt();
-        }
-        System.out.println("Contenido :");
-       /* for (int i = 0; i < numeros.length; i++){
-            System.out.println("Numero " + (i+1) + ": " + numeros[i]);
+
+        // Pedir al usuario los números
+        for (int i = 0; i < numeros.length; i++) {
+            System.out.print("Introduce el número " + (i + 1) + ": ");
+            numeros[i] = sc.nextInt();
         }
 
-
-        for (int num : numeros) {
-
-            System.out.println("Elemento " + indice + ":" + num);
-            indice++;
+        System.out.println("\n Recorrido con FOR:");
+        for (int i = 0; i < numeros.length; i++) {
+            System.out.println("Elemento " + (i + 1) + ": " + numeros[i]);
         }
 
-        while (ind < numeros.length) {
-            System.out.println("Posicion" + (ind+1) + ": " + numeros[ind]);
-            ind ++;
+        System.out.println("\n Recorrido con FOR-EACH:");
+        int contador = 1;
+        for (int numero : numeros) {
+            System.out.println("Elemento " + contador + ": " + numero);
+            contador++;
         }
 
-        Arrays.stream(numeros).forEach( num ->System.out.println("Elemento: " + num));*/
+        System.out.println("\n Recorrido con WHILE:");
+        int i = 0;
+        while (i < numeros.length) {
+            System.out.println("Elemento " + (i + 1) + ": " + numeros[i]);
+            i++;
+        }
 
+        System.out.println("\n Recorrido con STREAM:");
+        Arrays.stream(numeros).forEach(n -> System.out.println("Elemento: " + n));
+
+        // Sumar con foreach
+        int sumaForeach = 0;
+        for (int numero : numeros) {
+            sumaForeach += numero;
+        }
+        System.out.println("\n Suma con FOR-EACH: " + sumaForeach);
+
+        // Sumar con stream
+        int sumaStream = Arrays.stream(numeros).sum();
+        System.out.println("Suma con STREAM: " + sumaStream);
     }
 }
