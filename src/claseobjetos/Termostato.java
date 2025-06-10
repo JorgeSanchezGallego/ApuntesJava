@@ -19,6 +19,8 @@ public class Termostato {
     }
     public void comprobarTemperatura(){
         double actual = termometro.leerTemperatura();
+        System.out.println("Temperatura actual: " + actual + "temperatura deseada: " +this.temperaturaDeseada);
+
         if ( actual > this.temperaturaDeseada) {
             for (Split s : splits) {
                 s.encender();
