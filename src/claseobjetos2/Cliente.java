@@ -32,6 +32,10 @@ public class Cliente {
             return true;
         }
         return false;
+    }
+
+    public void mostrarInfo(){
+        System.out.println("Dni: " + this.dni + "\nNombre: " + this.nombre + "\nSaldo: " + this.saldo);
 
 
     }
